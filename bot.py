@@ -73,7 +73,10 @@ def generate_post() -> str:
         },
         timeout=60,
     )
-    response.raise_for_status()
+    if not response.ok:
+        raise RuntimeError(
+            f"Ошибка Anthropic API: {response.status_code} {response.text}"
+        )
     data = response.json()
 
     text_parts = [block["text"] for block in data["content"] if block.get("type") == "text"]
