@@ -66,7 +66,7 @@ def generate_post() -> str:
             "content-type": "application/json",
         },
         json={
-            "model": "claude-sonnet-4-5",
+            "model": "claude-sonnet-5",
             "max_tokens": 500,
             "system": SYSTEM_PROMPT,
             "messages": [{"role": "user", "content": user_prompt}],
@@ -86,8 +86,8 @@ def generate_post() -> str:
 
 
 def send_to_telegram(text: str) -> None:
-    token = os.environ["8941079708:AAGL_hHy3bbw5kNc3votICVV74u_Hnze4Mc"]
-    channel_id = os.environ["https://t.me/dasturchi_log"]
+    token = os.environ["TELEGRAM_BOT_TOKEN"]
+    channel_id = os.environ["TELEGRAM_CHANNEL_ID"]
 
     response = requests.post(
         TELEGRAM_API_URL.format(token=token),
