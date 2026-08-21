@@ -40,8 +40,8 @@ def pick_post() -> str:
 
 
 def send_to_telegram(text: str) -> None:
-    token = os.environ.get("8941079708:AAGL_hHy3bbw5kNc3votICVV74u_Hnze4Mc", "")
-    channel_id = os.environ.get("https://t.me/dasturchi_log", "")
+  token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+channel_id = os.environ.get("TELEGRAM_CHANNEL_ID", "")
 
     if not token:
         raise RuntimeError("Секрет TELEGRAM_BOT_TOKEN не задан или пустой.")
