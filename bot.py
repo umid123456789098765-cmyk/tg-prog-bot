@@ -1,6 +1,8 @@
 """
-Бот: генерирует пост про программирование через Claude AP
+Бот: берёт готовый пост про программирование из posts.py
 и отправляет его в Telegram-канал.
+
+Никакого AI, никаких платных API — только Telegram, который бесплатен.
 
 Запускается по расписанию через GitHub Actions (см. .github/workflows/post.yml).
 
@@ -10,75 +12,26 @@
 """
 
 import os
-import random
 import sys
+from datetime import datetime, timezone
+
 import requests
+
+from posts import POSTS
 
 TELEGRAM_API_URL = "https://api.telegram.org/bot{token}/sendMessage"
 
-# Пул тем, чтобы посты не повторялись слишком часто.
-# Каждый запуск случайно выбирает 1-2 темы и просит модель
-# написать пост, слегка отталкиваясь от них (но не обязательно строго по теме).
-TOPICS = [
-    "полезная фича Python, о которой мало кто знает",
-    "разница между двумя похожими концепциями (например, стек и очередь)",
-    "хороший совет по чистому коду",
-    "интересный факт из истории языков программирования",
-    "распространённая ошибка джуниора и как её избежать",
-    "объяснение алгоритма или структуры данных простыми словами",
-    "полезная команда/трюк в Git",
-    "разница между двумя похожими инструментами (REST vs GraphQL и т.п.)",
-    "принцип SOLID или другой паттерн проектирования",
-    "интересная деталь про то, как работает память/сеть/ОС",
-    "лайфхак по продуктивности разработчика",
-    "разбор частой ошибки в понимании асинхронности/многопоточности",
-]
-
-SYSTEM_PROMPT = """Ты ведёшь Telegram-канал про программирование.
-Твоя задача — написать ОДИН короткий пост для канала.
-
-Требования:
-- Язык: русский
-- Длина: 3-7 предложений (коротко и по делу, это Telegram, не лонгрид)
-- Без markdown-разметки (**, ##, и т.п.) — только обычный текст, можно эмодзи по делу (1-2 шт, не переусердствуй)
-- Можно короткий пример кода, если уместно — в тройных апострофах не нужно, просто впиши как есть
-- Стиль: живой, конкретный, без воды и без вступлений в духе "Сегодня поговорим о..."
-- В конце — необязательно, но можно короткий вопрос к читателям для вовлечения
-- Не подписывай пост, не добавляй хэштеги, не пиши "Пост:" в начале — выдай только сам текст поста
-"""
+SLOT_HOURS = [4, 9, 14]
 
 
-def generate_post() -> str:
-    topics = random.sample(TOPICS, k=2)
-    user_prompt = (
-        f"Оттолкнись (необязательно строго) от одной из этих тем: "
-        f"«{topics[0]}» или «{topics[1]}». Напиши пост."
-    )
+def pick_post() -> str:
+    now = datetime.now(timezone.utc)
+    day_of_year = now.timetuple().tm_yday
 
-    response = requests.post(
-        headers={
-            "x-api-key": api_key,
-            "anthropic-version": "2023-06-01",
-            "content-type": "application/json",
-        },
-        json={
-            "model": "claude-sonnet-5",
-            "max_tokens": 500,
-            "system": SYSTEM_PROMPT,
-            "messages": [{"role": "user", "content": user_prompt}],
-        },
-        timeout=60,
-    )
-    if not response.ok:
-    data = response.json()
+    slot = min(range(len(SLOT_HOURS)), key=lambda i: abs(SLOT_HOURS[i] - now.hour))
 
-    text_parts = [block["text"] for block in data["content"] if block.get("type") == "text"]
-    post_text = "\n".join(text_parts).strip()
-
-    if not post_text:
-        raise RuntimeError(f"Пустой ответ от Claude API: {data}")
-
-    return post_text
+    index = (day_of_year * len(SLOT_HOURS) + slot) % len(POSTS)
+    return POSTS[index]
 
 
 def send_to_telegram(text: str) -> None:
@@ -101,8 +54,8 @@ def send_to_telegram(text: str) -> None:
 
 def main() -> int:
     try:
-        post = generate_post()
-        print("Сгенерированный пост:\n" + post)
+        post = pick_post()
+        print("Отправляемый пост:\n" + post)
         send_to_telegram(post)
         print("Пост успешно отправлен в канал.")
         return 0
