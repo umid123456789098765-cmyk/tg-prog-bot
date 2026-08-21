@@ -6,17 +6,12 @@
 Каждый пост — словарь с двумя полями:
   "text"  — текст поста (обязательно)
   "image" — прямая ссылка на картинку (необязательно, можно None)
-
-Картинки для части постов уже подобраны по теме и лежат в папке images/
-этого репозитория, ссылки указывают на raw.githubusercontent.com.
-Чтобы поменять картинку у поста — впишите другую ссылку в "image".
-Чтобы добавить новый пост — допишите словарь в конец списка ниже.
 """
 
 POSTS = [
     {
         "text": "В Python можно поменять местами две переменные одной строкой: a, b = b, a — без временной переменной и лишнего кода.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Разница между == и is в Python: == сравнивает значения, is сравнивает, один ли это объект в памяти. Частая ловушка для новичков.",
@@ -24,7 +19,7 @@ POSTS = [
     },
     {
         "text": "git commit --amend позволяет поправить последний коммит, не создавая новый. Полезно, если забыли файл или опечатались в сообщении.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "Стек работает по принципу LIFO (последним пришёл — первым вышел), очередь — по принципу FIFO (первым пришёл — первым вышел). Стек — как стопка тарелок, очередь — как очередь в кассу.",
@@ -32,7 +27,7 @@ POSTS = [
     },
     {
         "text": "Big O нотация описывает не точное время работы алгоритма, а то, как оно растёт с увеличением входных данных. O(n) значит: вдвое больше данных — примерно вдвое дольше работа.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png?v=1",
     },
     {
         "text": "HTTP-статус 418 — это не шутка разработчиков, а настоящий код из RFC 2324: 'I'm a teapot'. Возвращается, если чайник отказывается заваривать кофе.",
@@ -40,7 +35,7 @@ POSTS = [
     },
     {
         "text": "REST и GraphQL решают одну задачу по-разному: REST даёт фиксированные эндпоинты, GraphQL позволяет клиенту самому запросить именно те поля, которые нужны.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "Принцип единственной ответственности (Single Responsibility) из SOLID гласит: у класса должна быть только одна причина для изменения. Проще говоря — один класс, одна задача.",
@@ -48,7 +43,7 @@ POSTS = [
     },
     {
         "text": "TCP гарантирует доставку данных и порядок пакетов, UDP — нет, зато он быстрее. Поэтому видеозвонки часто работают через UDP: лучше потерять кадр, чем ждать его повторной отправки.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "Рекурсия без базового случая — гарантированный StackOverflowError. Прежде чем писать рекурсивную функцию, сначала продумайте условие выхода, а уже потом — сам вызов.",
@@ -56,7 +51,7 @@ POSTS = [
     },
     {
         "text": "git rebase переписывает историю коммитов, git merge — сохраняет её как есть, добавляя merge-коммит. Rebase даёт чистую линейную историю, но менять уже опубликованные коммиты им опасно.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "Оператор ?? в JavaScript (nullish coalescing) — это `a ?? b`, которое возвращает b только если a равно null или undefined. В отличие от ||, оно не сработает на 0 или пустой строке.",
@@ -64,7 +59,7 @@ POSTS = [
     },
     {
         "text": "Хеш-таблица даёт доступ к элементу в среднем за O(1), но при плохой хеш-функции и множестве коллизий скорость может упасть до O(n). Выбор хеш-функции — не мелочь.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png?v=1",
     },
     {
         "text": "Мьютекс и семафор — не одно и то же. Мьютекс разрешает доступ к ресурсу только одному потоку, семафор — сразу нескольким, ограниченным числом.",
@@ -72,7 +67,7 @@ POSTS = [
     },
     {
         "text": "В SQL JOIN бывает разный: INNER JOIN вернёт только совпадающие строки, LEFT JOIN — все строки левой таблицы, даже если совпадений в правой нет.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "Комментарий 'этот код не трогать, он работает' — тревожный сигнал: обычно значит, что никто до конца не понимает, почему он работает.",
@@ -80,7 +75,7 @@ POSTS = [
     },
     {
         "text": "Асинхронность — не то же самое, что многопоточность. Асинхронный код может выполняться в одном потоке, просто не блокируя его на время ожидания (например, ответа от сервера).",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "docker build кэширует слои образа. Если часто меняющиеся файлы (например, код) скопировать в Dockerfile раньше редко меняющихся (зависимостей), кэш будет постоянно сбрасываться зря.",
@@ -88,7 +83,7 @@ POSTS = [
     },
     {
         "text": "В Git ветка — это просто указатель на коммит, а не копия всех файлов. Именно поэтому создание веток в Git почти мгновенное, в отличие от старых систем контроля версий.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "Принцип DRY (Don't Repeat Yourself) не означает 'никогда не дублируй код'. Иногда небольшое дублирование — меньшее зло, чем неправильная абстракция, которая свяжет два несвязанных места кода.",
@@ -96,7 +91,7 @@ POSTS = [
     },
     {
         "text": "У float есть проблема с точностью: 0.1 + 0.2 в большинстве языков не равно ровно 0.3 из-за особенностей двоичного представления дробей. Для денег лучше использовать целые числа (копейки) или Decimal.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "SELECT * в продакшене — плохая привычка: даже если сейчас в таблице 5 колонок, завтра их станет 20, и запрос будет тянуть лишние данные, которые никто не использует.",
@@ -104,7 +99,7 @@ POSTS = [
     },
     {
         "text": "Индекс в базе данных ускоряет чтение (SELECT), но замедляет запись (INSERT/UPDATE), потому что индекс тоже нужно обновлять. Не стоит индексировать каждую колонку подряд.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В JavaScript есть тонкая разница между null и undefined: undefined значит 'значение не присвоено вообще', null — 'значение сознательно установлено в пустое'.",
@@ -112,7 +107,7 @@ POSTS = [
     },
     {
         "text": "Юнит-тест должен быть быстрым, независимым от других тестов и детерминированным — то есть выдавать один и тот же результат при каждом запуске, без обращения к сети или реальной базе.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "Оператор `**` в Python — это возведение в степень, а не побитовое И, как в некоторых других языках. 2 ** 10 равно 1024, а не что-то другое.",
@@ -120,7 +115,7 @@ POSTS = [
     },
     {
         "text": "Правило большого пальца по неймингу: если для описания переменной нужен комментарий рядом — переменную стоит переименовать, а не комментировать.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В CSS specificity (специфичность) считается не по 'кто ниже в файле', а по 'чей селектор точнее'. ID (#id) сильнее класса (.class), класс сильнее тега (div).",
@@ -128,7 +123,7 @@ POSTS = [
     },
     {
         "text": "Ленивая загрузка (lazy loading) означает, что данные или модули подгружаются только тогда, когда реально нужны, а не сразу при старте программы. Это ускоряет запуск больших приложений.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git .gitignore не удаляет уже отслеживаемые файлы из репозитория — он только не даёт добавить новые. Если файл уже закоммичен, его нужно сначала убрать через git rm --cached.",
@@ -136,7 +131,7 @@ POSTS = [
     },
     {
         "text": "Идемпотентность в API значит: повторный одинаковый запрос не меняет результат. GET и PUT обычно идемпотентны, POST — как правило, нет (каждый вызов может создавать новую запись).",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python списки (list) изменяемы, а кортежи (tuple) — нет. Из-за этого кортежи можно использовать как ключи словаря, а списки — нельзя.",
@@ -144,7 +139,7 @@ POSTS = [
     },
     {
         "text": "Принцип открытости/закрытости (Open/Closed) из SOLID: код должен быть открыт для расширения, но закрыт для изменения. То есть новую функциональность лучше добавлять, а не переписывать старую.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "CORS (Cross-Origin Resource Sharing) — это не баг браузера, а защитный механизм: он не даёт сайту A незаметно слать запросы с вашими куками на сайт B от вашего имени.",
@@ -152,7 +147,7 @@ POSTS = [
     },
     {
         "text": "В базах данных ACID — это гарантии транзакций: атомарность, согласованность, изолированность и надёжность. Если хоть одна из них нарушена — транзакционная система ненадёжна.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "Комментарии в коде должны объяснять 'почему', а не 'что'. Код и так показывает, что он делает — комментарий полезен, когда объясняет неочевидное решение или причину компромисса.",
@@ -160,7 +155,7 @@ POSTS = [
     },
     {
         "text": "В Git слово 'origin' — это просто имя удалённого репозитория по умолчанию, а не зарезервированное слово. Можно назвать удалённый репозиторий как угодно, хоть 'myserver'.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "Разница между процессом и потоком: у каждого процесса своя память, потоки внутри одного процесса делят память между собой. Из-за этого потокам легче общаться, но и легче создать гонку данных.",
@@ -168,7 +163,7 @@ POSTS = [
     },
     {
         "text": "В SQL NULL — это не 0 и не пустая строка, это 'значение неизвестно'. Поэтому NULL = NULL возвращает не TRUE, а NULL — нужно использовать IS NULL.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "Кэш-промах (cache miss) — не всегда плохо, если он редкий. Опасно, когда кэш настроен неправильно и промахи происходят чаще, чем попадания — тогда кэш только замедляет систему.",
@@ -176,7 +171,7 @@ POSTS = [
     },
     {
         "text": "Функция чистая (pure function), если результат зависит только от входных данных и она не меняет ничего вне себя. Чистые функции легче тестировать и переиспользовать.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "git stash временно откладывает незакоммиченные изменения в сторону, не создавая коммит. Удобно, когда нужно срочно переключиться на другую ветку, а работа ещё не готова.",
@@ -184,7 +179,7 @@ POSTS = [
     },
     {
         "text": "В Python оператор `is` для маленьких целых чисел (от -5 до 256) может неожиданно вернуть True даже без явного присваивания одного объекта — из-за внутреннего кэширования интерпретатора.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Задача N+1 в базах данных — классическая проблема производительности: сначала один запрос достаёт список из N записей, потом для каждой из них — ещё по отдельному запросу. Итого N+1 обращений к базе вместо одного через JOIN.",
@@ -192,7 +187,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript `this` — не то же самое, что в других языках: его значение зависит от того, как функция вызвана, а не от того, где она объявлена. Стрелочные функции берут `this` из внешнего контекста.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "WAL (Write-Ahead Logging) в базах данных — это когда изменения сначала записываются в лог, и только потом применяются к самим данным. Если сервер упадёт посреди записи, по логу можно восстановить состояние.",
@@ -200,7 +195,7 @@ POSTS = [
     },
     {
         "text": "Оптимистичная блокировка (optimistic locking) предполагает, что конфликты редки: система разрешает изменение, а конфликт проверяет только в момент сохранения. Пессимистичная — блокирует ресурс заранее, на всякий случай.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git 'detached HEAD' — это когда вы находитесь не на ветке, а прямо на конкретном коммите. Коммиты в этом состоянии легко потерять, если не создать новую ветку до переключения.",
@@ -208,7 +203,7 @@ POSTS = [
     },
     {
         "text": "Принцип подстановки Лисков (Liskov Substitution) из SOLID: объект дочернего класса должен уметь заменить объект родительского класса без поломки логики программы.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "SQL-инъекция происходит, когда пользовательский ввод напрямую вставляется в текст запроса. Параметризованные запросы (prepared statements) решают эту проблему — они не дают данным превратиться в код.",
@@ -216,7 +211,7 @@ POSTS = [
     },
     {
         "text": "В CSS flexbox ось main и cross меняются местами при смене flex-direction. При row главная ось — горизонтальная, при column — вертикальная. Это часто путает новичков при выравнивании.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png?v=1",
     },
     {
         "text": "Метод бинарного поиска работает только на отсортированных данных и находит элемент за O(log n) — то есть при удвоении размера массива число шагов увеличивается всего на один.",
@@ -224,7 +219,7 @@ POSTS = [
     },
     {
         "text": "В Git 'squash' объединяет несколько коммитов в один. Полезно перед мёрджем в основную ветку — вместо 15 коммитов 'fix typo', 'wip', 'oops' история получает один осмысленный коммит.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "Явное лучше неявного — один из принципов дзена Python (import this). Код, где поведение можно предсказать, читая его сверху вниз, обычно легче поддерживать, чем 'магический' с побочными эффектами.",
@@ -232,7 +227,7 @@ POSTS = [
     },
     {
         "text": "В многопоточном коде 'race condition' возникает, когда результат работы программы зависит от того, какой поток первым успел выполниться. Такие баги воспроизводятся не всегда — это делает их особенно неприятными.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "HTTP-методы GET и POST различаются не только техническими деталями: GET предполагается безопасным и не должен менять состояние сервера, POST — как раз для изменений (создание, обновление данных).",
@@ -240,7 +235,7 @@ POSTS = [
     },
     {
         "text": "Мемоизация — способ ускорить рекурсивные функции, сохраняя уже посчитанные результаты. Классический пример — вычисление чисел Фибоначчи: без мемоизации сложность экспоненциальная, с ней — линейная.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png?v=1",
     },
     {
         "text": "В Git тег (tag) — это метка на конкретном коммите, обычно используется для версий релизов (v1.0.0). В отличие от ветки, тег обычно не двигается вместе с новыми коммитами.",
@@ -248,7 +243,7 @@ POSTS = [
     },
     {
         "text": "Принцип инверсии зависимостей (Dependency Inversion) из SOLID: модули верхнего уровня не должны зависеть от модулей нижнего уровня — оба должны зависеть от абстракций.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python генераторы (generator) вычисляют значения по одному, по требованию, а не сразу все в память. Это экономит память при работе с большими или бесконечными последовательностями данных.",
@@ -256,7 +251,7 @@ POSTS = [
     },
     {
         "text": "Оператор XOR (^) часто используют для поиска единственного нечётного элемента в массиве, где остальные встречаются парами — все пары взаимно обнулятся, останется искомое число.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python декоратор — это функция, которая оборачивает другую функцию, добавляя ей поведение без изменения самого кода. Синтаксис @decorator — просто удобная запись для func = decorator(func).",
@@ -264,7 +259,7 @@ POSTS = [
     },
     {
         "text": "Разница между стеком вызовов (call stack) и кучей (heap): в стеке хранятся локальные переменные и адреса возврата функций, в куче — объекты с динамическим временем жизни. Стек быстрее, но ограничен по размеру.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png?v=1",
     },
     {
         "text": "В Git 'fast-forward' merge происходит, когда в целевой ветке не было новых коммитов после ответвления — Git просто двигает указатель ветки вперёд, без создания merge-коммита.",
@@ -272,7 +267,7 @@ POSTS = [
     },
     {
         "text": "Foreign key (внешний ключ) в базе данных не даёт удалить запись, на которую ссылаются другие таблицы, если явно не указано поведение CASCADE. Это защищает от 'осиротевших' записей.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В JavaScript всплытие событий (event bubbling) означает: клик по вложенному элементу сначала обрабатывается им самим, а потом поднимается вверх по всем родительским элементам, если не остановлен явно.",
@@ -280,7 +275,7 @@ POSTS = [
     },
     {
         "text": "Принцип разделения интерфейса (Interface Segregation) из SOLID: лучше несколько маленьких специализированных интерфейсов, чем один большой 'на все случаи жизни', который заставляет реализовывать ненужные методы.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python оператор `with` (контекстный менеджер) гарантирует, что ресурс (файл, соединение с базой) будет закрыт, даже если внутри блока произошла ошибка — не нужно вручную писать try/finally.",
@@ -288,7 +283,7 @@ POSTS = [
     },
     {
         "text": "Идея 'fail fast' в разработке: лучше упасть с понятной ошибкой сразу, как только что-то пошло не так, чем продолжить работу с некорректными данными и получить непонятный баг где-то дальше.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В базах данных денормализация — намеренное дублирование данных ради скорости чтения. Это осознанный компромисс: меньше JOIN'ов, но сложнее поддерживать согласованность при обновлениях.",
@@ -296,7 +291,7 @@ POSTS = [
     },
     {
         "text": "git cherry-pick позволяет перенести один конкретный коммит из одной ветки в другую, не сливая всю ветку целиком. Удобно для точечных фиксов, которые нужны в нескольких местах.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "В Python модуль `functools.lru_cache` добавляет мемоизацию к функции одной строкой — декоратором. Полезно для дорогих по времени вычислений, которые часто повторяются с одними и теми же аргументами.",
@@ -304,7 +299,7 @@ POSTS = [
     },
     {
         "text": "Событийный цикл (event loop) в JavaScript — это механизм, который постоянно проверяет очередь задач и выполняет их по одной, когда стек вызовов пуст. Именно поэтому setTimeout(fn, 0) не выполнится мгновенно.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "В SQL агрегатные функции (COUNT, SUM, AVG) без GROUP BY считают по всей таблице сразу. С GROUP BY — отдельно для каждой группы значений в указанной колонке.",
@@ -312,7 +307,7 @@ POSTS = [
     },
     {
         "text": "Принцип наименьшего удивления (Principle of Least Astonishment): код должен вести себя так, как ожидает читатель, даже не заглядывая в реализацию. Неожиданное поведение — источник багов и раздражения.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git 'git blame' показывает, кто и в каком коммите последний раз менял каждую строку файла. Полезно искать не виноватых, а контекст: почему код написан именно так.",
@@ -320,7 +315,7 @@ POSTS = [
     },
     {
         "text": "Циклическая сложность (cyclomatic complexity) кода растёт с каждым условием, циклом и веткой логики. Чем она выше — тем труднее протестировать все возможные пути выполнения функции.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "В Python оператор `*args` собирает произвольное число позиционных аргументов в кортеж, `**kwargs` — произвольное число именованных аргументов в словарь. Названия — просто конвенция, важны именно `*` и `**`.",
@@ -328,7 +323,7 @@ POSTS = [
     },
     {
         "text": "HTTP-заголовок Cache-Control управляет тем, как долго и где браузер может хранить копию ответа без повторного запроса к серверу. no-cache — не значит 'не кэшировать', а значит 'сначала проверь актуальность'.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В базах данных транзакция с уровнем изоляции READ UNCOMMITTED может прочитать данные, которые другая транзакция ещё не зафиксировала (и, возможно, откатит). Это называется 'грязное чтение'.",
@@ -336,7 +331,7 @@ POSTS = [
     },
     {
         "text": "git log --oneline --graph показывает историю коммитов компактно, с визуальными линиями веток. Полезно, чтобы быстро понять, как ветки сливались и расходились.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "В Python списковые включения (list comprehensions) вида [x for x in range(10)] обычно быстрее и читаемее, чем эквивалентный цикл for с append, хотя за читаемость иногда приходится следить отдельно.",
@@ -344,7 +339,7 @@ POSTS = [
     },
     {
         "text": "Принцип 'composition over inheritance' — предпочитайте собирать поведение объекта из маленьких компонентов, а не выстраивать глубокую иерархию наследования. Так проще менять поведение без переписывания всей цепочки классов.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В JavaScript замыкание (closure) — функция, которая 'помнит' переменные из окружения, в котором была создана, даже после того как это окружение формально завершило выполнение.",
@@ -352,7 +347,7 @@ POSTS = [
     },
     {
         "text": "Оператор LIKE в SQL с шаблоном '%значение' (знак процента в начале) не может использовать обычный индекс по колонке — базе приходится сканировать таблицу целиком, что медленно на больших объёмах.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Git 'git reflog' хранит историю перемещений HEAD — даже если вы случайно удалили ветку или сделали неудачный reset, часто можно найти и восстановить нужный коммит через reflog.",
@@ -360,7 +355,7 @@ POSTS = [
     },
     {
         "text": "Принцип KISS (Keep It Simple, Stupid) напоминает: сложное решение не всегда лучшее. Если задачу можно решить простым способом — усложнение ради 'на будущее' часто того не стоит.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python `__slots__` в классе ограничивает набор атрибутов объекта и экономит память, отказываясь от служебного словаря __dict__ для каждого экземпляра. Полезно при создании миллионов маленьких объектов.",
@@ -368,7 +363,7 @@ POSTS = [
     },
     {
         "text": "Различие между авторизацией и аутентификацией: аутентификация отвечает на вопрос 'кто вы', авторизация — 'что вам разрешено делать'. Успешный логин не значит, что у пользователя есть доступ ко всему.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/security.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/security.png?v=1",
     },
     {
         "text": "В CSS `box-sizing: border-box` заставляет padding и border учитываться внутри заданной ширины элемента, а не добавляться поверх неё — это избавляет от неожиданных 'расползающихся' блоков.",
@@ -376,7 +371,7 @@ POSTS = [
     },
     {
         "text": "Паттерн 'Наблюдатель' (Observer) позволяет объекту оповещать список подписчиков об изменениях, не зная заранее, кто именно подписан. Похожая идея лежит в основе событий в браузере и во многих UI-фреймворках.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "git bisect автоматизирует поиск коммита, в котором появился баг: вы отмечаете 'плохой' и 'хороший' коммит, а Git делает бинарный поиск между ними, каждый раз спрашивая, воспроизводится ли проблема.",
@@ -384,7 +379,7 @@ POSTS = [
     },
     {
         "text": "В Python `is` сравнивает identity объектов, а `==` вызывает метод __eq__. Для собственных классов, если не переопределить __eq__, оба оператора по умолчанию сработают одинаково — по identity.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Уровень изоляции транзакций SERIALIZABLE — самый строгий: транзакции выполняются так, будто идут строго одна за другой. Это исключает почти все аномалии параллельного доступа, но снижает пропускную способность базы.",
@@ -392,7 +387,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript Promise.all() ждёт выполнения всех переданных промисов и падает целиком, если хоть один из них отклонён. Promise.allSettled() ждёт все, но не падает — просто возвращает статус каждого.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "Паттерн 'Стратегия' (Strategy) позволяет менять алгоритм поведения объекта на лету, подставляя разные реализации одного интерфейса — например, разные способы сортировки или разные способы оплаты.",
@@ -400,7 +395,7 @@ POSTS = [
     },
     {
         "text": "В Git форк (fork) — это ваша собственная копия чужого репозитория на GitHub, а не команда Git. Технически это просто ещё один репозиторий, между которым и оригиналом можно синхронизироваться вручную.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "Circuit breaker (предохранитель) в распределённых системах — паттерн, который временно 'отключает' обращения к сервису, если тот постоянно падает с ошибками, чтобы не заваливать его новыми запросами и дать восстановиться.",
@@ -408,7 +403,7 @@ POSTS = [
     },
     {
         "text": "В Python при передаче списка или словаря в функцию по умолчанию как аргумента — он создаётся один раз при определении функции, а не при каждом вызове. Классическая ловушка: def f(x=[]) незаметно копит данные между вызовами.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Индекс в базе данных на нескольких колонках (составной индекс) работает эффективно только если запрос использует их в том же порядке слева направо, в котором индекс был создан.",
@@ -416,7 +411,7 @@ POSTS = [
     },
     {
         "text": "В CSS z-index работает только у элементов с position, отличным от static. Если элемент 'не поднимается' поверх других, часто дело не в самом z-index, а в забытом position: relative/absolute.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png?v=1",
     },
     {
         "text": "Паттерн 'Фабричный метод' (Factory Method) откладывает решение о том, какой именно класс создавать, до момента вызова — это удобно, когда точный тип объекта зависит от условий во время выполнения программы.",
@@ -424,7 +419,7 @@ POSTS = [
     },
     {
         "text": "git push --force перезаписывает историю на удалённом репозитории и может стереть чужие коммиты, если они там уже есть. git push --force-with-lease безопаснее: он откажется, если на сервере появилось что-то новое, чего вы не видели.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "В Python `__init__` — не конструктор в классическом смысле, а инициализатор: сам объект уже создан к моменту его вызова методом __new__. Обычно про это можно не думать, но при метапрограммировании разница важна.",
@@ -432,7 +427,7 @@ POSTS = [
     },
     {
         "text": "REST API часто версионируют через URL (/api/v1/, /api/v2/) — это простое и явное решение, хотя есть и альтернативы: версия в заголовке запроса или в самом теле ответа.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В JavaScript оператор spread (...) копирует элементы массива или объекта на верхнем уровне, но не делает глубокую копию — вложенные объекты и массивы всё ещё останутся общими ссылками.",
@@ -440,7 +435,7 @@ POSTS = [
     },
     {
         "text": "Паттерн 'Одиночка' (Singleton) гарантирует, что у класса будет только один экземпляр на всё приложение. Полезен для общих ресурсов вроде подключения к базе, но легко превращается в антипаттерн при злоупотреблении.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git 'git diff' без аргументов показывает изменения, которые ещё не добавлены в индекс (staging area), а 'git diff --staged' — те, что уже добавлены, но ещё не закоммичены.",
@@ -448,7 +443,7 @@ POSTS = [
     },
     {
         "text": "Атомарность операции значит, что она выполняется целиком или не выполняется вовсе — промежуточного состояния снаружи не видно. Это ключевое свойство, которое защищает от 'наполовину применённых' изменений при сбое.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python модуль `dataclasses` избавляет от рутинного написания __init__, __repr__ и __eq__ для простых классов-контейнеров данных — достаточно объявить поля с аннотациями типов.",
@@ -456,7 +451,7 @@ POSTS = [
     },
     {
         "text": "TTL (Time To Live) в кэшировании и DNS определяет, сколько времени запись считается актуальной, прежде чем её нужно обновить или удалить. Слишком большой TTL — устаревшие данные, слишком маленький — лишняя нагрузка.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Linux команда `chmod 755 file` даёт владельцу полный доступ (rwx), а группе и остальным — только чтение и выполнение (r-x). Числа кодируют права: 4 — чтение, 2 — запись, 1 — выполнение, складываются между собой.",
@@ -464,7 +459,7 @@ POSTS = [
     },
     {
         "text": "Регулярное выражение — не всегда лучший инструмент для парсинга структурированных данных вроде HTML или JSON: у них есть вложенность, которую regex в общем случае корректно не описывает. Для этого существуют специализированные парсеры.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png?v=1",
     },
     {
         "text": "В Go горутины (goroutines) — это лёгкие потоки, управляемые самим рантаймом языка, а не операционной системой. Их можно запускать тысячами без серьёзной нагрузки на память, в отличие от ОС-потоков.",
@@ -472,7 +467,7 @@ POSTS = [
     },
     {
         "text": "OWASP Top 10 — регулярно обновляемый список самых распространённых уязвимостей веб-приложений. Из года в год там почти всегда присутствуют инъекции и проблемы с контролем доступа.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/security.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/security.png?v=1",
     },
     {
         "text": "В Rust концепция владения (ownership) на этапе компиляции проверяет, что у данных не будет одновременно нескольких изменяемых ссылок — это исключает целый класс багов с гонкой данных без сборщика мусора.",
@@ -480,7 +475,7 @@ POSTS = [
     },
     {
         "text": "Метод чёрного ящика (black box testing) проверяет поведение системы по входам и выходам, не заглядывая в код. Метод белого ящика (white box) — наоборот, тестирует, зная внутреннюю структуру и логику.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Docker команда `docker-compose` описывает несколько контейнеров и их связи в одном YAML-файле — удобно поднимать одной командой сразу базу данных, бэкенд и очередь сообщений вместе.",
@@ -488,7 +483,7 @@ POSTS = [
     },
     {
         "text": "Утечка памяти в языках со сборщиком мусора всё ещё возможна: если объект случайно остаётся достижимым (например, через забытый обработчик события), сборщик мусора не сможет его освободить.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python оператор `walrus` (:=) позволяет присвоить значение переменной прямо внутри выражения: if (n := len(data)) > 10. Появился в Python 3.8 и часто сокращает код в условиях и циклах.",
@@ -496,7 +491,7 @@ POSTS = [
     },
     {
         "text": "CDN (Content Delivery Network) раздаёт статические файлы с серверов, географически близких к пользователю — это снижает задержку загрузки страницы и разгружает основной сервер приложения.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В SQL оконные функции (window functions) вроде ROW_NUMBER() OVER (...) позволяют считать ранги, накопительные суммы и скользящие средние без сложных подзапросов и без потери отдельных строк, как это было бы с GROUP BY.",
@@ -504,7 +499,7 @@ POSTS = [
     },
     {
         "text": "Паттерн CQRS (Command Query Responsibility Segregation) разделяет операции чтения и записи данных на разные модели — это полезно, когда логика чтения и записи сильно отличается по требованиям к производительности.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В JavaScript строгий режим ('use strict') запрещает неявное создание глобальных переменных и некоторые другие небезопасные конструкции — часто помогает поймать ошибки, которые иначе прошли бы молча.",
@@ -512,7 +507,7 @@ POSTS = [
     },
     {
         "text": "Экспоненциальный backoff — стратегия повторных попыток запроса с увеличивающейся задержкой между ними (1с, 2с, 4с, 8с...). Это снижает нагрузку на упавший сервис вместо агрессивных повторов подряд.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python `assert` предназначен для отладки и тестов, а не для проверки пользовательского ввода в продакшене — с флагом оптимизации -O интерпретатор все assert-выражения просто игнорирует.",
@@ -520,7 +515,7 @@ POSTS = [
     },
     {
         "text": "Протокол WebSocket в отличие от HTTP держит постоянное двустороннее соединение — сервер может сам присылать данные клиенту в любой момент, без необходимости клиенту постоянно опрашивать сервер (polling).",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git 'submodule' позволяет подключить один репозиторий как папку внутри другого, сохраняя привязку к конкретному коммиту. Работать с ними неудобно, поэтому многие команды предпочитают монорепозитории или пакетные менеджеры.",
@@ -528,7 +523,7 @@ POSTS = [
     },
     {
         "text": "Идея feature flag (флаг функциональности) — включать новый код в продакшене не через деплой, а через переключатель конфигурации. Это позволяет откатить проблемную функцию мгновенно, без нового релиза.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/devops.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/devops.png?v=1",
     },
     {
         "text": "В Python модуль `contextlib.suppress` позволяет тихо игнорировать конкретный тип исключения без громоздкого try/except/pass — короче и явно показывает, какую именно ошибку вы ожидаете.",
@@ -536,7 +531,7 @@ POSTS = [
     },
     {
         "text": "Consistent hashing (консистентное хеширование) используется в распределённых кэшах и базах данных, чтобы при добавлении или удалении сервера перераспределялась только малая часть данных, а не всё целиком.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В CSS переменные (custom properties, --my-var) в отличие от препроцессорных переменных (Sass) можно менять во время выполнения через JavaScript и они наследуются по DOM-дереву, как обычные CSS-свойства.",
@@ -544,7 +539,7 @@ POSTS = [
     },
     {
         "text": "HTTP/2 в отличие от HTTP/1.1 умеет мультиплексировать несколько запросов через одно TCP-соединение — это убирает необходимость в трюках вроде склейки файлов в один, чтобы сократить число соединений.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python итератор и итерируемый объект — разные вещи: итерируемый (iterable) можно обойти в цикле несколько раз, итератор (iterator) — одноразовый, после исчерпания он не 'перезапускается'.",
@@ -552,7 +547,7 @@ POSTS = [
     },
     {
         "text": "Паттерн Repository скрывает детали хранения данных (SQL, ORM, файлы) за простым интерфейсом вроде getById() или save() — бизнес-логика перестаёт зависеть напрямую от конкретной базы данных.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Linux команда `top` или `htop` показывает загрузку CPU и памяти в реальном времени по процессам — часто первый инструмент, к которому обращаются при подозрении на утечку ресурсов на сервере.",
@@ -560,7 +555,7 @@ POSTS = [
     },
     {
         "text": "Отличие юнит-теста от интеграционного: юнит-тест проверяет один изолированный кусок кода (часто с моками зависимостей), интеграционный — как несколько частей системы работают вместе, например с реальной базой.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В JavaScript деструктуризация массива const [a, b] = [1, 2] и объекта const {x, y} = obj — удобный способ вытащить нужные значения в отдельные переменные без обращения по индексу или ключу вручную.",
@@ -568,7 +563,7 @@ POSTS = [
     },
     {
         "text": "gRPC в отличие от классического REST использует бинарный протокол Protocol Buffers вместо текстового JSON — это компактнее и быстрее, но менее удобно читать человеку напрямую без специальных инструментов.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png?v=1",
     },
     {
         "text": "В Python списки и словари при переборе цикла нельзя безопасно изменять размер (добавлять/удалять элементы) — это может привести к пропуску элементов или ошибке RuntimeError. Для изменений обычно строят новую коллекцию.",
@@ -576,7 +571,7 @@ POSTS = [
     },
     {
         "text": "Идемпотентный ключ (idempotency key) в API платежей — уникальный идентификатор запроса, который клиент присылает сам. Если запрос из-за сетевой ошибки отправится повторно, сервер поймёт, что это дубликат, и не спишет деньги дважды.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В базах данных шардинг (sharding) — разбиение одной большой таблицы на несколько частей на разных серверах по какому-то ключу (например, ID пользователя). Это масштабирует запись, но усложняет запросы, затрагивающие несколько шардов сразу.",
@@ -584,7 +579,7 @@ POSTS = [
     },
     {
         "text": "В CSS Grid, в отличие от Flexbox, можно управлять раскладкой сразу в двух измерениях — по строкам и колонкам одновременно, что удобно для сложных макетов страниц целиком, а не отдельных рядов элементов.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png?v=1",
     },
     {
         "text": "В Python `__repr__` предназначен для однозначного технического представления объекта (для разработчика), а `__str__` — для человекочитаемого вывода (например, в print()). Если __str__ не определён, используется __repr__.",
@@ -592,7 +587,7 @@ POSTS = [
     },
     {
         "text": "Circuit breaker, retry и timeout — три базовых паттерна устойчивости в распределённых системах. По отдельности каждый решает свою проблему, но вместе они предотвращают каскадные отказы одного упавшего сервиса на всю систему.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/cloud.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/cloud.png?v=1",
     },
     {
         "text": "В Git 'git worktree' позволяет одновременно иметь несколько рабочих директорий с разными ветками одного репозитория — не нужно постоянно переключаться веткой в одной папке, теряя незакоммиченные изменения.",
@@ -600,7 +595,7 @@ POSTS = [
     },
     {
         "text": "Событие 'thundering herd' (стадное поведение) возникает, когда после сбоя кэша сразу множество запросов одновременно бьют в базу данных за одними и теми же данными — базу может просто положить лавиной запросов.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python сравнение чисел с плавающей точкой лучше делать не через ==, а через math.isclose(a, b) — так учитывается допустимая погрешность вычислений, характерная для формата float.",
@@ -608,7 +603,7 @@ POSTS = [
     },
     {
         "text": "Blue-green деплой держит две одинаковые копии продакшена (blue и green): новая версия выкатывается на неактивную, тестируется, и трафик переключается мгновенно — откат в случае проблем тоже происходит мгновенно.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/devops.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/devops.png?v=1",
     },
     {
         "text": "В JavaScript оператор typeof null возвращает 'object' — это известная историческая ошибка в самой первой реализации языка, которую нельзя исправить, не сломав огромное количество существующего кода.",
@@ -616,7 +611,7 @@ POSTS = [
     },
     {
         "text": "Индекс типа B-tree — самый распространённый тип индекса в реляционных базах, хорошо работает для точных совпадений и диапазонных запросов (>, <, BETWEEN). Для полнотекстового поиска обычно нужен отдельный тип индекса.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Python менеджер пакетов pip по умолчанию устанавливает библиотеки глобально — виртуальное окружение (venv) изолирует зависимости конкретного проекта, чтобы разные проекты не конфликтовали версиями одной и той же библиотеки.",
@@ -624,7 +619,7 @@ POSTS = [
     },
     {
         "text": "Rate limiting (ограничение частоты запросов) защищает API от перегрузки — например, не больше 100 запросов в минуту с одного IP. Часто реализуется через алгоритм token bucket или leaky bucket.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png?v=1",
     },
     {
         "text": "В CSS псевдокласс :not() позволяет применить стиль ко всем элементам, кроме указанного — например, li:not(:last-child) добавит отступ всем пунктам списка, кроме последнего, без лишнего класса в разметке.",
@@ -632,7 +627,7 @@ POSTS = [
     },
     {
         "text": "Оператор Elvis (?:) в некоторых языках (Kotlin, PHP) — сокращённая запись 'взять значение, а если оно null — взять значение по умолчанию'. В JavaScript похожую роль играет ??.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "В Python модуль `typing` позволяет добавлять аннотации типов (def f(x: int) -> str), которые сам интерпретатор не проверяет во время выполнения — для этого используются отдельные инструменты вроде mypy.",
@@ -640,7 +635,7 @@ POSTS = [
     },
     {
         "text": "Паттерн Saga координирует распределённую транзакцию через последовательность локальных транзакций с компенсирующими действиями на случай ошибки — используется там, где обычная ACID-транзакция невозможна из-за нескольких сервисов.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Git номер коммита (SHA-1 хеш) вычисляется из содержимого файлов, метаданных и родительского коммита — если изменить хоть один байт в истории, все последующие хеши коммитов тоже изменятся.",
@@ -648,7 +643,7 @@ POSTS = [
     },
     {
         "text": "Идея graceful degradation — когда часть функциональности сайта или сервиса отваливается (например, недоступен сторонний виджет), но основная часть продолжает нормально работать, а не падает целиком.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python исключения (Exception) — это объекты, и их можно создавать свои, наследуясь от Exception. Хорошая практика — использовать специфичные типы ошибок вместо общего Exception, чтобы обработчик мог различать причины сбоя.",
@@ -656,7 +651,7 @@ POSTS = [
     },
     {
         "text": "Consistent read vs. eventual consistency: в первом случае вы всегда читаете самые свежие данные, во втором — система гарантирует, что данные станут согласованными со временем, но не мгновенно после записи. Многие NoSQL-базы выбирают второй подход ради скорости.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В CSS transition анимирует изменение свойства при событии (например, hover), а animation с @keyframes может проигрываться автоматически и повторяться без внешнего триггера.",
@@ -664,7 +659,7 @@ POSTS = [
     },
     {
         "text": "В Python `try/except/else/finally`: блок else выполняется, только если в try не было исключения, а finally — всегда, независимо от того, было исключение или нет, даже если внутри был return.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Semver (семантическое версионирование) вида MAJOR.MINOR.PATCH: MAJOR меняется при несовместимых изменениях API, MINOR — при добавлении новой функциональности с обратной совместимостью, PATCH — при исправлении багов.",
@@ -672,7 +667,7 @@ POSTS = [
     },
     {
         "text": "В базах данных полнотекстовый поиск отличается от обычного LIKE '%слово%' тем, что учитывает морфологию языка, релевантность и ранжирование результатов — просто поиск подстроки этого не умеет.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В JavaScript async/await — синтаксический сахар над промисами: await буквально приостанавливает выполнение асинхронной функции до тех пор, пока промис не выполнится, не блокируя при этом весь остальной код.",
@@ -680,7 +675,7 @@ POSTS = [
     },
     {
         "text": "Паттерн Circuit Breaker имеет три состояния: closed (запросы идут нормально), open (запросы сразу отклоняются без попытки), half-open (пробный запрос проверяет, восстановился ли сервис).",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Python модуль `pathlib` предлагает объектно-ориентированный способ работы с путями файловой системы вместо ручной склейки строк через os.path.join — код получается короче и переносимее между ОС.",
@@ -688,7 +683,7 @@ POSTS = [
     },
     {
         "text": "Технический долг — не всегда плохо: иногда осознанно выбрать более быстрое, но менее идеальное решение ради скорости выхода на рынок — разумный компромисс, если долг потом действительно 'выплачивается'.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git разница между 'git pull' и 'git fetch': fetch только скачивает изменения с сервера, не трогая вашу текущую ветку, pull делает то же самое и сразу пытается их влить (merge или rebase) в текущую ветку.",
@@ -696,7 +691,7 @@ POSTS = [
     },
     {
         "text": "В SQL EXPLAIN (или EXPLAIN ANALYZE) показывает план выполнения запроса — как база данных на самом деле будет искать данные: через индекс или полным сканированием таблицы. Первый шаг в оптимизации медленных запросов.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Python оператор `in` для списка проверяет каждый элемент по очереди — O(n), для множества (set) или словаря — использует хеш-таблицу и работает в среднем за O(1). При частых проверках на вхождение set обычно быстрее.",
@@ -704,7 +699,7 @@ POSTS = [
     },
     {
         "text": "Blue team и red team в информационной безопасности: red team имитирует атаки на систему, чтобы найти уязвимости, blue team защищает и отражает эти атаки — вместе они регулярно тренируют устойчивость инфраструктуры.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/security.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/security.png?v=1",
     },
     {
         "text": "В CSS единица измерения rem привязана к размеру шрифта корневого элемента (html), а em — к размеру шрифта родителя. Из-за этого em может неожиданно накапливаться при вложенности, а rem — предсказуема.",
@@ -712,7 +707,7 @@ POSTS = [
     },
     {
         "text": "В Python `__eq__` и `__hash__` должны быть согласованы: если два объекта равны (__eq__ вернул True), их хеши (__hash__) обязаны совпадать — иначе объект будет странно себя вести в множествах и словарях.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Health check эндпоинт (обычно /health или /status) в сервисе позволяет системе мониторинга или балансировщику нагрузки автоматически понять, жив ли сервис и готов ли принимать трафик, без анализа логов вручную.",
@@ -720,7 +715,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript debounce откладывает выполнение функции, пока события не прекратятся на заданное время (полезно для поиска по мере ввода), throttle — ограничивает частоту вызова функции, даже если события идут непрерывно.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "В базах данных составной первичный ключ состоит из нескольких колонок сразу — уникальность гарантируется только их комбинацией, а не каждой колонкой по отдельности.",
@@ -728,7 +723,7 @@ POSTS = [
     },
     {
         "text": "В Python GIL (Global Interpreter Lock) не даёт нескольким потокам одновременно выполнять байткод Python в одном процессе — из-за этого многопоточность в CPython плохо ускоряет CPU-интенсивные задачи, но хорошо подходит для I/O-операций.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Паттерн Adapter превращает интерфейс одного класса в интерфейс, ожидаемый клиентским кодом — классический пример: адаптер вокруг стороннего API, чтобы остальной код не зависел напрямую от чужой библиотеки.",
@@ -736,7 +731,7 @@ POSTS = [
     },
     {
         "text": "В Git merge conflict возникает, когда одна и та же строка файла изменена по-разному в двух ветках, которые сливаются — Git не может решить это автоматически и просит человека выбрать нужный вариант вручную.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "Content negotiation в HTTP — когда клиент через заголовок Accept сообщает серверу, в каком формате хочет получить ответ (JSON, XML, HTML), а сервер выбирает подходящий вариант из доступных.",
@@ -744,7 +739,7 @@ POSTS = [
     },
     {
         "text": "В Python модуль `itertools` содержит эффективные инструменты для работы с последовательностями без создания промежуточных списков в памяти — например, itertools.chain для объединения нескольких итераторов подряд.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Blast radius (радиус поражения) в контексте инцидентов — насколько широко распространяется влияние одного сбоя. Хорошая архитектура старается ограничивать blast radius, чтобы падение одного компонента не роняло всю систему.",
@@ -752,7 +747,7 @@ POSTS = [
     },
     {
         "text": "В CSS свойство will-change подсказывает браузеру заранее оптимизировать рендеринг элемента под будущую анимацию или трансформацию — но злоупотребление им, наоборот, может съедать лишнюю память.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png?v=1",
     },
     {
         "text": "В Python оператор `//` — целочисленное деление (округление вниз), а `%` — остаток от деления. Для отрицательных чисел поведение может удивить: -7 // 2 равно -4, а не -3, потому что округление идёт именно вниз, а не к нулю.",
@@ -760,7 +755,7 @@ POSTS = [
     },
     {
         "text": "Паттерн Command инкапсулирует запрос как объект — это позволяет параметризовать объекты действием, ставить их в очередь, логировать и поддерживать отмену операций (undo), храня историю выполненных команд.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png?v=1",
     },
     {
         "text": "В Git тег может быть 'lightweight' (просто указатель на коммит) или 'annotated' (полноценный объект с автором, датой и сообщением). Для релизов обычно рекомендуют annotated-теги.",
@@ -768,7 +763,7 @@ POSTS = [
     },
     {
         "text": "Sticky session (липкая сессия) в балансировке нагрузки закрепляет пользователя за одним конкретным сервером на всё время сессии — упрощает работу с состоянием в памяти, но мешает равномерно распределять нагрузку.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/cloud.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/cloud.png?v=1",
     },
     {
         "text": "В Python строки неизменяемы (immutable) — любая 'модификация' строки на самом деле создаёт новую строку в памяти. При частой конкатенации большого числа строк в цикле эффективнее использовать список и join() в конце.",
@@ -776,7 +771,7 @@ POSTS = [
     },
     {
         "text": "REST API обычно возвращает статус 201 Created при успешном создании ресурса (а не просто 200 OK), часто вместе с заголовком Location, указывающим URL нового созданного объекта.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В базах данных connection pool держит заранее открытый набор соединений с базой, которые приложение переиспользует, вместо того чтобы открывать новое TCP-соединение на каждый запрос — это заметно экономит время.",
@@ -784,7 +779,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript метод Array.prototype.map() всегда возвращает новый массив той же длины, а filter() — новый массив, но, возможно, короче. Путать их местами — частая причина неожиданного поведения у новичков.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "Паттерн Decorator оборачивает объект дополнительным поведением, не меняя его класс — в отличие от наследования, декораторы можно комбинировать динамически в любом порядке во время выполнения программы.",
@@ -792,7 +787,7 @@ POSTS = [
     },
     {
         "text": "В Git понятие 'upstream' ветки — это удалённая ветка, с которой связана локальная (обычно через git push -u). После этого достаточно просто git push и git pull без явного указания имени ветки и репозитория.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "Latency (задержка) и throughput (пропускная способность) — разные метрики производительности: латентность — сколько времени занимает один запрос, throughput — сколько запросов система обрабатывает в единицу времени. Оптимизация одной не всегда улучшает другую.",
@@ -800,7 +795,7 @@ POSTS = [
     },
     {
         "text": "В Python любое исключение внутри генератора, не пойманное явно, всплывает при следующем обращении к next() — сам генератор при этом останавливается и больше не может выдавать значения.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Zero-downtime deployment (деплой без простоя) достигается за счёт постепенного переключения трафика на новую версию сервиса, пока старая ещё продолжает обрабатывать запросы — пользователи не замечают обновления.",
@@ -808,7 +803,7 @@ POSTS = [
     },
     {
         "text": "В CSS медиа-запросы (@media) позволяют применять разные стили в зависимости от характеристик устройства — чаще всего от ширины экрана, что лежит в основе адаптивной вёрстки (responsive design).",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png?v=1",
     },
     {
         "text": "В Python `copy.deepcopy()` рекурсивно копирует вложенные объекты, а обычный `copy.copy()` — только верхний уровень (shallow copy). Вложенные списки или словари при shallow copy остаются общими ссылками.",
@@ -816,7 +811,7 @@ POSTS = [
     },
     {
         "text": "Паттерн Builder пошагово собирает сложный объект через цепочку вызовов методов — полезен, когда у объекта много опциональных параметров и обычный конструктор с десятком аргументов стал бы нечитаемым.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git конфликт слияния бинарных файлов (например, картинок) Git не умеет разрешать построчно, как текст — приходится вручную выбирать одну из двух версий файла целиком.",
@@ -824,7 +819,7 @@ POSTS = [
     },
     {
         "text": "Идея immutable infrastructure: вместо того чтобы вручную обновлять сервер 'на месте', при каждом изменении разворачивается полностью новый сервер из образа, а старый просто удаляется — это исключает 'дрейф конфигурации' со временем.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В JavaScript оператор === сравнивает и значение, и тип, не приводя их друг к другу, в отличие от == , который перед сравнением пытается привести типы — это источник многих неочевидных багов в старом коде.",
@@ -832,7 +827,7 @@ POSTS = [
     },
     {
         "text": "В SQL транзакция с уровнем изоляции REPEATABLE READ гарантирует, что повторное чтение одной и той же строки в рамках транзакции всегда вернёт одинаковый результат, даже если другая транзакция успела её изменить и закоммитить.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "В Python модуль `logging` в продакшн-коде почти всегда предпочтительнее простого print() — он умеет уровни важности сообщений, форматирование, запись в файл и ротацию логов без дополнительного кода.",
@@ -840,7 +835,7 @@ POSTS = [
     },
     {
         "text": "Паттерн Circuit Breaker и паттерн Bulkhead решают разные задачи устойчивости: Circuit Breaker останавливает вызовы к упавшему сервису, Bulkhead изолирует ресурсы (например, пул потоков) одного сервиса от другого, чтобы сбой в одном не забрал ресурсы у остальных.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git локальная ветка может 'отстать' от удалённой (remote), если кто-то другой запушил изменения, а вы их ещё не подтянули — git status обычно явно подскажет, на сколько коммитов разошлись ветки.",
@@ -848,7 +843,7 @@ POSTS = [
     },
     {
         "text": "Отличие горизонтального масштабирования от вертикального: вертикальное — добавить ресурсов одному серверу (больше CPU, памяти), горизонтальное — добавить больше серверов и распределить нагрузку между ними.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/cloud.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/cloud.png?v=1",
     },
     {
         "text": "В Python оператор `not in` читается естественнее, чем `not (x in y)` — например, if x not in list вместо if not x in list, хотя оба варианта технически работают одинаково.",
@@ -856,7 +851,7 @@ POSTS = [
     },
     {
         "text": "Паттерн Publisher-Subscriber (Pub/Sub) похож на Observer, но обычно предполагает промежуточный брокер сообщений между издателем и подписчиками — они не знают друг о друге напрямую, только о самом канале сообщений.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В CSS свойство overflow: hidden не просто прячет содержимое за пределами блока — оно также создаёт новый 'блочный форматирующий контекст', что иногда неожиданно исправляет проблемы с обтеканием float-элементов.",
@@ -864,7 +859,7 @@ POSTS = [
     },
     {
         "text": "В Python f-строки (f-strings, f'{value}') появились в Python 3.6 и обычно быстрее старого форматирования через .format() или % — они вычисляются во время выполнения прямо в момент создания строки.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Health-check в Kubernetes бывает двух видов: liveness probe проверяет, жив ли контейнер вообще (иначе его перезапустят), readiness probe — готов ли он принимать трафик прямо сейчас (иначе временно уберут из балансировки).",
@@ -872,7 +867,7 @@ POSTS = [
     },
     {
         "text": "В Git 'orphan branch' — это ветка без общей истории с остальными, полезна, например, для хранения GitHub Pages в том же репозитории, но полностью отдельно от истории основного кода.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "В JavaScript оператор instanceof проверяет цепочку прототипов объекта, а не просто 'тип' в привычном смысле — это может вести себя неожиданно с объектами, созданными в разных фреймах или контекстах (iframe).",
@@ -880,7 +875,7 @@ POSTS = [
     },
     {
         "text": "В Go нет исключений в привычном смысле — ошибки возвращаются как обычное значение вторым результатом функции (result, err), и вызывающий код обязан явно проверить err, а не может случайно 'забыть' про try/catch.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Rust компилятор не даёт скомпилировать код с гонкой данных или использованием освобождённой памяти — эти ошибки ловятся на этапе компиляции через систему владения (ownership), а не падением в рантайме.",
@@ -888,7 +883,7 @@ POSTS = [
     },
     {
         "text": "TypeScript не меняет поведение JavaScript в рантайме — все типы проверяются только при компиляции и полностью стираются, поэтому опечатка в типе не защитит от неправильных данных, пришедших извне (например, из API).",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "В SQL оконные функции (window functions, OVER()) позволяют считать агрегаты (сумму, ранг, среднее) для каждой строки, не схлопывая результат через GROUP BY — строки остаются, просто рядом появляется вычисленное значение.",
@@ -896,7 +891,7 @@ POSTS = [
     },
     {
         "text": "Паттерн Strategy позволяет менять алгоритм поведения объекта на лету, передавая разные реализации одного интерфейса — классический пример: разные способы сортировки или расчёта скидки без изменения основного класса.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/algo.png?v=1",
     },
     {
         "text": "В Docker команда COPY отличается от ADD: ADD умеет автоматически распаковывать архивы и качать файлы по URL, COPY делает только простое копирование — из-за предсказуемости COPY обычно предпочтительнее.",
@@ -904,7 +899,7 @@ POSTS = [
     },
     {
         "text": "В Python декоратор @staticmethod не получает ни self, ни cls — это просто обычная функция, логически связанная с классом, а @classmethod получает сам класс (cls) вместо экземпляра.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "CAP-теорема гласит: распределённая система не может одновременно гарантировать согласованность (Consistency), доступность (Availability) и устойчивость к разделению сети (Partition tolerance) — приходится выбирать два из трёх.",
@@ -912,7 +907,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript замыкание (closure) — это функция, которая 'помнит' переменные из внешней области видимости даже после того, как внешняя функция завершила выполнение.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "В Git 'cherry-pick' переносит один конкретный коммит из одной ветки в другую, не затрагивая остальную историю — удобно, когда нужен только один фикс, а не весь набор изменений из ветки.",
@@ -920,7 +915,7 @@ POSTS = [
     },
     {
         "text": "В базах данных денормализация — намеренное добавление дублирующихся данных ради скорости чтения, за счёт усложнения записи и риска рассинхронизации. Это осознанный компромисс, а не ошибка проектирования.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Python оператор `@` — не только декоратор, но и матричное умножение (со времён Python 3.5), если объекты (например, NumPy-массивы) поддерживают метод __matmul__.",
@@ -928,7 +923,7 @@ POSTS = [
     },
     {
         "text": "Feature flag (флаг функциональности) позволяет включать или выключать часть кода в продакшене без нового деплоя — полезно для постепенного раската фич или быстрого отката при проблеме.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В CSS Grid, в отличие от Flexbox, изначально проектировался для двумерной раскладки — то есть одновременно управляет и строками, и колонками, тогда как Flexbox эффективен в основном по одной оси.",
@@ -936,7 +931,7 @@ POSTS = [
     },
     {
         "text": "В Python модуль `dataclasses` автоматически генерирует __init__, __repr__ и __eq__ для класса, который в основном просто хранит данные — избавляет от рутинного шаблонного кода.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "Экспоненциальный backoff — стратегия повторных попыток запроса с постепенно увеличивающейся паузой между ними (1с, 2с, 4с, 8с...), обычно с элементом случайности (jitter), чтобы клиенты не 'ударили' сервер одновременно после сбоя.",
@@ -944,7 +939,7 @@ POSTS = [
     },
     {
         "text": "В Git 'bisect' автоматизирует бинарный поиск коммита, в котором появился баг — вместо ручного перебора истории Git сам предлагает коммиты для проверки и сужает диапазон в несколько раз быстрее.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "В JavaScript Promise.all() падает целиком, если хотя бы один промис отклонён, а Promise.allSettled() всегда дожидается всех и возвращает результат по каждому — успешный или с ошибкой.",
@@ -952,7 +947,7 @@ POSTS = [
     },
     {
         "text": "Паттерн Repository изолирует логику доступа к данным (базе, файлу, внешнему API) за единым интерфейсом — остальной код работает с абстракцией и не знает, откуда физически берутся данные.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В SQL EXPLAIN (или EXPLAIN ANALYZE) показывает, как база данных на самом деле планирует выполнить запрос — используется ли индекс, в каком порядке соединяются таблицы — вместо догадок 'на глаз'.",
@@ -960,7 +955,7 @@ POSTS = [
     },
     {
         "text": "В Python сравнение чисел с плавающей точкой на равенство (`a == b`) — плохая идея из-за погрешности вычислений; вместо этого обычно сравнивают, что разница между числами меньше маленького порога (epsilon).",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "В Kubernetes Pod — не то же самое, что контейнер: под может содержать несколько контейнеров, которые делят сеть и хранилище и всегда планируются на один и тот же узел вместе.",
@@ -968,7 +963,7 @@ POSTS = [
     },
     {
         "text": "В Git файл .gitattributes может задавать, как Git обрабатывает конкретные типы файлов — например, принудительно считать бинарным файл с расширением .psd, чтобы Git не пытался показать diff построчно.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "В JavaScript хойстинг (hoisting) поднимает объявления переменных (var) и функций в начало области видимости при выполнении — но не их присвоенные значения, из-за чего переменная может быть 'объявлена', но ещё undefined.",
@@ -976,7 +971,7 @@ POSTS = [
     },
     {
         "text": "Паттерн Singleton гарантирует, что у класса есть только один экземпляр на всё приложение — полезен для общих ресурсов вроде подключения к базе, но легко превращается в антипаттерн, если используется слишком часто.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В базах данных шардинг (sharding) — это разбиение одной большой таблицы на несколько частей на разных серверах, обычно по какому-то ключу (например, ID пользователя), чтобы распределить нагрузку.",
@@ -984,7 +979,7 @@ POSTS = [
     },
     {
         "text": "В Python оператор `is not` предпочтительнее `not ... is` по читаемости — например, if x is not None, а не if not x is None, хотя результат одинаковый.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "В HTTP заголовок ETag позволяет клиенту спросить сервер 'изменились ли данные с прошлого раза', отправив старое значение ETag — если данные те же, сервер вернёт 304 Not Modified без повторной передачи всего тела ответа.",
@@ -992,7 +987,7 @@ POSTS = [
     },
     {
         "text": "В Git конфликт при rebase решается иначе, чем при merge: вместо одного объединяющего коммита Git проигрывает коммиты по одному заново поверх новой базы, и конфликт может возникать несколько раз подряд, на каждом коммите.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/git.png?v=1",
     },
     {
         "text": "В JavaScript 'event loop' — механизм, который позволяет однопоточному языку не блокироваться на долгих операциях: пока ждём ответ от сервера, движок обрабатывает другие задачи из очереди, а не простаивает.",
@@ -1000,7 +995,7 @@ POSTS = [
     },
     {
         "text": "Идея blue-green деплоя: держим две одинаковые продакшн-среды (blue и green), обновляем неактивную, тестируем, а затем одним переключением трафика (например, на балансировщике) мгновенно переводим пользователей на новую версию.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/devops.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/devops.png?v=1",
     },
     {
         "text": "В Python `__slots__` в классе запрещает создавать произвольные новые атрибуты у экземпляра и немного экономит память, отказываясь от обычного словаря __dict__ для хранения атрибутов.",
@@ -1008,7 +1003,7 @@ POSTS = [
     },
     {
         "text": "В базах данных 'phantom read' — ситуация, когда повторный запрос в рамках одной транзакции внезапно возвращает новые строки, добавленные другой параллельной транзакцией — один из классов аномалий изоляции транзакций.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В CSS псевдокласс :not() позволяет применить стиль ко всем элементам, кроме тех, что соответствуют указанному селектору — например, li:not(:last-child) уберёт отступ у всех пунктов списка, кроме последнего.",
@@ -1016,7 +1011,7 @@ POSTS = [
     },
     {
         "text": "В Python модуль `functools.lru_cache` — готовая мемоизация в одну строку: декоратор кэширует результаты функции по аргументам и возвращает сохранённое значение при повторном вызове с теми же аргументами.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "В Git 'fast-forward merge' происходит, когда в целевой ветке не было новых коммитов с момента создания текущей — Git просто двигает указатель ветки вперёд, без создания отдельного merge-коммита.",
@@ -1024,7 +1019,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript таймер setTimeout(fn, 0) не выполняется мгновенно — он всё равно ставится в конец очереди задач и выполнится только после того, как текущий синхронный код и микрозадачи (например, промисы) завершатся.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "Паттерн Facade скрывает сложную систему из множества классов за одним простым интерфейсом — клиентский код обращается к фасаду, не зная о внутренней сложности библиотеки или подсистемы за ним.",
@@ -1032,7 +1027,7 @@ POSTS = [
     },
     {
         "text": "В базах данных 'covering index' содержит все колонки, нужные запросу, поэтому базе не приходится дополнительно обращаться к самой таблице за данными — только к индексу, что заметно ускоряет чтение.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Python синтаксис `*args` и `**kwargs` позволяет функции принимать произвольное число позиционных и именованных аргументов соответственно — звёздочки здесь про распаковку, а не про сами имена args/kwargs.",
@@ -1040,7 +1035,7 @@ POSTS = [
     },
     {
         "text": "В HTTP код 429 Too Many Requests сигнализирует о превышении лимита запросов (rate limit) — часто вместе с заголовком Retry-After, который подсказывает клиенту, сколько секунд подождать перед повтором.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git submodule подключает один репозиторий внутрь другого, фиксируя конкретный коммит внешнего проекта — в отличие от простого копирования кода, submodule явно хранит, какая именно версия зависимости используется.",
@@ -1048,7 +1043,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript спред-оператор (...) в массиве создаёт поверхностную копию (shallow copy) — вложенные объекты внутри массива всё ещё останутся общими ссылками с оригиналом.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "Circuit Breaker (предохранитель) — паттерн отказоустойчивости: если сервис постоянно падает с ошибками, circuit breaker временно перестаёт слать к нему запросы вообще, давая ему время восстановиться, вместо того чтобы заваливать его новыми попытками.",
@@ -1056,7 +1051,7 @@ POSTS = [
     },
     {
         "text": "В Python итератор и итерируемый объект (iterable) — разные вещи: итерируемый объект можно обойти в цикле много раз (например, список), а итератор помнит своё текущее положение и исчерпывается после одного прохода.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/python.png?v=1",
     },
     {
         "text": "В базах данных 'dirty read' — чтение ещё не зафиксированных (не закоммиченных) изменений другой транзакции, которые могут быть впоследствии откачены — самый низкий и самый рискованный уровень изоляции транзакций.",
@@ -1064,7 +1059,7 @@ POSTS = [
     },
     {
         "text": "В CSS box-sizing: border-box меняет способ расчёта ширины и высоты элемента — padding и border начинают учитываться внутри заданной ширины, а не добавляются сверху, что делает вёрстку заметно предсказуемее.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/web.png?v=1",
     },
     {
         "text": "В Python при передаче изменяемого объекта (например, списка) по умолчанию как аргумента функции возникает классическая ловушка: значение по умолчанию создаётся один раз при определении функции и делится между всеми вызовами.",
@@ -1072,7 +1067,7 @@ POSTS = [
     },
     {
         "text": "В HTTP различие между 401 Unauthorized и 403 Forbidden часто путают: 401 значит 'вы не аутентифицированы, представьтесь', 403 — 'вы аутентифицированы, но у вас нет прав на это действие'.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git тег с одинаковым именем на двух разных коммитах невозможен в одном репозитории — теги, как и ветки, должны быть уникальными по имени.",
@@ -1080,7 +1075,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript метод Object.freeze() делает объект неизменяемым только на верхнем уровне — вложенные объекты внутри него всё ещё можно менять, если сами по себе не заморожены отдельно.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "Паттерн Observer позволяет объекту (subject) уведомлять список подписчиков об изменениях состояния — это основа многих систем событий, включая слушатели событий в браузере и реактивные фреймворки.",
@@ -1088,7 +1083,7 @@ POSTS = [
     },
     {
         "text": "В базах данных 'foreign key' не просто документирует связь между таблицами — она заставляет базу физически проверять, что ссылающееся значение действительно существует в другой таблице, предотвращая 'осиротевшие' записи.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Python встроенная функция `enumerate()` возвращает и индекс, и сам элемент при переборе последовательности — избавляет от ручного счётчика вроде `i = 0` и `i += 1` внутри цикла.",
@@ -1096,7 +1091,7 @@ POSTS = [
     },
     {
         "text": "В HTTP заголовок Cache-Control с директивой no-store запрещает кэширование ответа вообще, а no-cache — разрешает кэшировать, но требует каждый раз проверять актуальность у сервера перед использованием.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git при слиянии двух веток порядок родительских коммитов в merge-коммите имеет значение — первый родитель обычно считается 'основной' линией истории, это влияет, например, на поведение git log --first-parent.",
@@ -1104,7 +1099,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript деструктуризация объекта `const {a, b} = obj` позволяет сразу вытащить нужные поля в отдельные переменные, без обращения к obj.a и obj.b по отдельности.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "Паттерн Factory Method делегирует создание объектов подклассам вместо прямого вызова конструктора в клиентском коде — это позволяет менять, какой именно класс создаётся, не трогая логику, которая этим объектом пользуется.",
@@ -1112,7 +1107,7 @@ POSTS = [
     },
     {
         "text": "В базах данных избыточная нормализация может навредить не меньше денормализации: слишком много мелких связанных таблиц means больше JOIN'ов на каждый запрос, что тоже бьёт по производительности.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Python модуль `contextlib` и оператор `with` управляют освобождением ресурсов (файлов, соединений, блокировок) автоматически — ресурс гарантированно закроется даже если внутри блока возникло исключение.",
@@ -1120,7 +1115,7 @@ POSTS = [
     },
     {
         "text": "В HTTP различие между PUT и PATCH: PUT предполагает полную замену ресурса целиком, PATCH — частичное обновление, когда в запросе передаются только изменённые поля.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git 'reflog' хранит локальную историю перемещений HEAD (в том числе после reset, rebase, checkout) даже когда коммит уже 'потерян' из обычной истории — часто спасает после случайного git reset --hard.",
@@ -1128,7 +1123,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript тернарный оператор `condition ? a : b` — единственный оператор в языке, который принимает три операнда, отсюда и название 'тернарный' (от лат. ternarius — тройной).",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "Паттерн State позволяет объекту менять поведение в зависимости от внутреннего состояния так, будто у объекта поменялся класс — вместо длинной цепочки if/switch по состояниям выделяется отдельный класс на каждое состояние.",
@@ -1136,7 +1131,7 @@ POSTS = [
     },
     {
         "text": "В базах данных 'lost update' — аномалия, когда две транзакции читают одно значение, обе вносят изменения, и одна из них перезаписывает результат другой, будто её обновления вообще не было.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Python сортировка `sorted(list, key=...)` вызывает функцию key ровно один раз на каждый элемент и кэширует результат для сравнений — это быстрее, чем если бы функция вызывалась заново при каждом сравнении пары элементов.",
@@ -1144,7 +1139,7 @@ POSTS = [
     },
     {
         "text": "В HTTP заголовок Vary указывает кэшу, что ответ сервера может отличаться в зависимости от значения другого заголовка запроса (например, Accept-Language) — без Vary кэш может по ошибке отдать не тот вариант ответа.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git 'shallow clone' (git clone --depth 1) скачивает только последний коммит без полной истории — заметно ускоряет клонирование больших репозиториев, если вся история не нужна (например, в CI).",
@@ -1152,7 +1147,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript метод String.prototype.trim() убирает пробелы только с начала и конца строки, но не внутри неё — для схлопывания множественных пробелов внутри текста нужен отдельный regex.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "Паттерн Proxy предоставляет объект-заместитель, который контролирует доступ к другому объекту — может добавлять ленивую инициализацию, кэширование или проверку прав доступа прозрачно для клиентского кода.",
@@ -1160,7 +1155,7 @@ POSTS = [
     },
     {
         "text": "В базах данных материализованное представление (materialized view) хранит результат запроса физически на диске, в отличие от обычного view, который каждый раз пересчитывается заново — быстрее читать, но данные могут устаревать.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Python сравнение `None == False` возвращает False, а `bool(None)` возвращает False — None не равен False напрямую, но ведёт себя как ложное значение в логических контекстах.",
@@ -1168,7 +1163,7 @@ POSTS = [
     },
     {
         "text": "В HTTP/2 мультиплексирование позволяет отправлять несколько запросов и получать ответы по одному TCP-соединению параллельно — в HTTP/1.1 для этого браузеры открывали несколько отдельных соединений одновременно.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/code.png?v=1",
     },
     {
         "text": "В Git 'worktree' позволяет одновременно иметь несколько рабочих директорий для разных веток одного репозитория — не нужно постоянно переключаться и стэшить изменения, чтобы посмотреть другую ветку.",
@@ -1176,7 +1171,7 @@ POSTS = [
     },
     {
         "text": "В JavaScript оператор опциональной цепочки `?.` (optional chaining) безопасно обращается к вложенному свойству, возвращая undefined вместо ошибки, если промежуточное значение равно null или undefined.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/javascript.png?v=1",
     },
     {
         "text": "Паттерн Chain of Responsibility передаёт запрос по цепочке обработчиков, пока один из них не возьмёт его на себя — классический пример: middleware в веб-фреймворках, где каждый обработчик может либо ответить, либо передать запрос дальше.",
@@ -1184,7 +1179,7 @@ POSTS = [
     },
     {
         "text": "В базах данных 'write-through' кэш записывает данные одновременно в кэш и в основное хранилище, а 'write-back' — сначала только в кэш, синхронизируя с хранилищем позже, что быстрее, но рискованнее при сбое.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/sql.png?v=1",
     },
     {
         "text": "В Python модуль `pathlib` предлагает объектно-ориентированную работу с путями файлов вместо ручной склейки строк через os.path.join — пути можно складывать оператором `/`, как в Path('dir') / 'file.txt'.",
@@ -1192,6 +1187,6 @@ POSTS = [
     },
     {
         "text": "В HTTP заголовок X-Forwarded-For добавляется прокси-сервером или балансировщиком, чтобы сохранить исходный IP-адрес клиента — без него сервер за прокси видел бы только IP самого прокси у всех запросов.",
-        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/cloud.png",
+        "image": "https://raw.githubusercontent.com/umid123456789098765-cmyk/tg-prog-bot/main/images/cloud.png?v=1",
     },
 ]
