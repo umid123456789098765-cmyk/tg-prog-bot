@@ -21,6 +21,9 @@ from posts import POSTS
 
 TELEGRAM_API_URL = "https://api.telegram.org/bot{token}/sendMessage"
 
+# Три запуска в день (см. .github/workflows/post.yml): 04:00, 09:00, 14:00 UTC.
+# Определяем "слот" по текущему часу UTC, чтобы выбрать пост по кругу без
+# повторов на дню, и без необходимости хранить состояние между запусками.
 SLOT_HOURS = [4, 9, 14]
 
 
@@ -28,6 +31,8 @@ def pick_post() -> str:
     now = datetime.now(timezone.utc)
     day_of_year = now.timetuple().tm_yday
 
+    # Находим ближайший слот по часу запуска (на случай, если запуск сдвинулся
+    # на пару минут — GitHub Actions иногда опаздывает с cron).
     slot = min(range(len(SLOT_HOURS)), key=lambda i: abs(SLOT_HOURS[i] - now.hour))
 
     index = (day_of_year * len(SLOT_HOURS) + slot) % len(POSTS)
@@ -35,8 +40,16 @@ def pick_post() -> str:
 
 
 def send_to_telegram(text: str) -> None:
-    token = os.environ["8941079708:AAGL_hHy3bbw5kNc3votICVV74u_Hnze4Mc"]
-    channel_id = os.environ["https://t.me/dasturchi_log"]
+    token = os.environ.get("8941079708:AAGL_hHy3bbw5kNc3votICVV74u_Hnze4Mc", "")
+    channel_id = os.environ.get("https://t.me/dasturchi_log", "")
+
+    if not token:
+        raise RuntimeError("Секрет TELEGRAM_BOT_TOKEN не задан или пустой.")
+    if not channel_id:
+        raise RuntimeError("Секрет TELEGRAM_CHANNEL_ID не задан или пустой.")
+
+    print(f"Длина токена: {len(token)} символов")
+    print(f"Channel ID (как есть): {channel_id!r}")
 
     response = requests.post(
         TELEGRAM_API_URL.format(token=token),
@@ -49,7 +62,11 @@ def send_to_telegram(text: str) -> None:
     )
 
     if not response.ok:
-        raise RuntimeError(f"Ошибка Telegram API: {response.status_code} {response.text}")
+        # Печатаем без самого токена в URL, чтобы не маскировалось целиком
+        raise RuntimeError(
+            f"Telegram API вернул ошибку. HTTP статус: {response.status_code}. "
+            f"Тело ответа: {response.text}"
+        )
 
 
 def main() -> int:
