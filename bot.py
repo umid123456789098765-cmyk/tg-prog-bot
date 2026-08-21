@@ -7,7 +7,6 @@
 Нужны переменные окружения (задаются как GitHub Secrets):
   TELEGRAM_BOT_TOKEN   - токен бота от @BotFather
   TELEGRAM_CHANNEL_ID  - @username_канала или числовой chat_id
-  ANTHROPIC_API_KEY    - ключ Anthropic API
 """
 
 import os
@@ -15,7 +14,6 @@ import random
 import sys
 import requests
 
-ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
 TELEGRAM_API_URL = "https://api.telegram.org/bot{token}/sendMessage"
 
 # Пул тем, чтобы посты не повторялись слишком часто.
@@ -51,7 +49,6 @@ SYSTEM_PROMPT = """Ты ведёшь Telegram-канал про программ
 
 
 def generate_post() -> str:
-    api_key = os.environ["ANTHROPIC_API_KEY"]
     topics = random.sample(TOPICS, k=2)
     user_prompt = (
         f"Оттолкнись (необязательно строго) от одной из этих тем: "
@@ -59,7 +56,6 @@ def generate_post() -> str:
     )
 
     response = requests.post(
-        ANTHROPIC_API_URL,
         headers={
             "x-api-key": api_key,
             "anthropic-version": "2023-06-01",
@@ -74,9 +70,6 @@ def generate_post() -> str:
         timeout=60,
     )
     if not response.ok:
-        raise RuntimeError(
-            f"Ошибка Anthropic API: {response.status_code} {response.text}"
-        )
     data = response.json()
 
     text_parts = [block["text"] for block in data["content"] if block.get("type") == "text"]
@@ -89,8 +82,8 @@ def generate_post() -> str:
 
 
 def send_to_telegram(text: str) -> None:
-    token = os.environ["TELEGRAM_BOT_TOKEN"]
-    channel_id = os.environ["TELEGRAM_CHANNEL_ID"]
+    token = os.environ["8941079708:AAGL_hHy3bbw5kNc3votICVV74u_Hnze4Mc"]
+    channel_id = os.environ["https://t.me/dasturchi_log"]
 
     response = requests.post(
         TELEGRAM_API_URL.format(token=token),
